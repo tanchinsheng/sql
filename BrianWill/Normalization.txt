@@ -1,0 +1,13 @@
+EF Codd - inventor
+
+1NF - No repeating columns
+Person(Id, Name, email, phone, child1, child2, child 3) -> Person(Id, Name, email, phone), personchildre(Id, SeqNo, child)
+
+2NF - All attributes depends on full primary key
+personprojectdetails (personid, projectid, personname, projectcode, projectname, personphone) ->
+person(personid, personame,personphone), project(projectid, projectcode, projectname)
+personprojectrelation(personid, projectid) <- many-to-many
+
+3NF - All attributes nontransitively dependent on primary key
+emplocaton(empname, city, country)  -- country depends on city and city depends on empname ->
+empnamecity(empname,city), citycountry(city, country)
